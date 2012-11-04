@@ -26,12 +26,25 @@ public class GuessNumber {
             }
         }
 
+        return PlaceCorrects+"a"+PlaceIncorrects+"b";
+    }
 
-        if(userInput.equals(randomNumber)){
-            return "4a0b";
-        }else if(userInput.equals("1256")) {
-            return "2a0b";
+    private boolean containsInput(int[] randomNum, int input) {
+        boolean boFlag = false;
+        for (int i:randomNum)
+        {
+            if(i == input)
+                return true;
         }
-        return "3a0b";
+        return boFlag;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    private int[] parseString(String userInput) {
+        int[] ilist = new int[4];
+        for (int i =0; i< 4; i++)
+        {
+            ilist[i] = Integer.parseInt(userInput.substring(i,i+1));
+        }
+        return ilist;  //To change body of created methods use File | Settings | File Templates.
     }
 }

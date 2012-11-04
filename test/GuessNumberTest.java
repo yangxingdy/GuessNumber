@@ -33,3 +33,5 @@ public class GuessNumberTest {
         assertEquals("2a1b", result);
     }
 }
+
+
